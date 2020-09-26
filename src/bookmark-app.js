@@ -29,10 +29,10 @@ const ratingByStars = function (item) {
 
     return stars.map(star => {
         return `<label for="${ratingId(item.id, star.rating)}">
-    <input class='hidden' type="radio" ${star.checked}
+    <input type="radio" ${star.checked}
       name="rating" 
       id="${ratingId(item.id, star.rating)}" value="${star.rating}"/>
-      <span class="hidden">
+      <span>
          ${star.rating} stars.
     </span>
     `;
@@ -134,7 +134,7 @@ const newBookmarkForm = function () {
     New Bookmark Url</label>
           <input class="new-bookmark-form-input" type="url" name="url" id="new-bookmark-url"
             placeholder="URL, eg. https://example.code" required ${url}/></p>
-        <p><label class="hidden" for="new-bookmark-rating">
+        <p><label for="new-bookmark-rating">
     New Bookmark Rating</label>
           <div class="js-new-bookmark-rating new-bookmark-rating">
       ${rating}
