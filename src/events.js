@@ -29,11 +29,11 @@ const handleNewFormSubmit = function () {
 };
 
 const handleFilter = function () {
-    $('main').on('change', '#filter-select', event => {
-      store.filter = $(event.target).val();
-      render();
-    });
-  };
+  $('main').on('change', '#filter-select', event => {
+    store.filter = $(event.target).val();
+    render();
+  });
+};
 
 const handleExpandBookmark = function () {
   $('main').on('click', '.js-bookmark-name, .collapse-bookmark', event => {
@@ -51,25 +51,23 @@ const handleAddNew = function () {
 };
 
 const handleRatingChange = function () {
-    $('main').on('change', '.js-bookmark-rating', event => {
-      const newRating = $(event.currentTarget)
-        .find('input[type="radio"]:checked').val();
-      const id = findId(event.currentTarget);
-      const updateData = {
-        rating: parseInt(newRating)
-      };
-      api.updateDataRecord(id, updateData)
-        .then(() => {
-          store.updateBookmark(id, updateData);
-          render();
-        })
-        .catch(error => {
-          store.error = error;
-          render();
-          store.error = null;
-        });
-    });
-  };
+  $('main').on('change', '.js-bookmark-rating', event => {
+    const newRating = $(event.currentTarget)
+      .find('input[type="radio"]:checked').val();
+    const id = findId(event.currentTarget);
+    const updateData = {
+      rating: parseInt(newRating)
+    };
+    api.updateDataRecord(id, updateData)
+      .then(() => {
+        store.updateBookmark(id, updateData);
+        render();
+      })
+      .catch(error => {
+        console.log(`Error: ${error}`)
+      });
+  });
+};
 
 const handleNewBookmarkRatingChange = function () {
   $('main').on('change', '.js-new-bookmark-rating', event => {
@@ -86,20 +84,18 @@ const handleNewBookmarkRatingChange = function () {
 };
 
 const handleDelete = function () {
-    $('main').on('click', '.js-bookmark-delete', event => {
-      const id = findId(event.currentTarget);
-      api.deleteDataRecord(id)
-        .then(() => {
-          store.deleteBookmark(id);
-          render();
-        })
-        .catch(error => {
-          store.error = error;
-          render();
-          store.error = null;
-        });
-    });
-  };
+  $('main').on('click', '.js-bookmark-delete', event => {
+    const id = findId(event.currentTarget);
+    api.deleteDataRecord(id)
+      .then(() => {
+        store.deleteBookmark(id);
+        render();
+      })
+      .catch(error => {
+        console.log(`Error: ${error}`)
+      });
+  });
+};
 
 const bindEventHandlers = function () {
   handleExpandBookmark();

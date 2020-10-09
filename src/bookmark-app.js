@@ -33,7 +33,7 @@ const ratingByStars = function (item) {
       name="rating" 
       id="${ratingId(item.id, star.rating)}" value="${star.rating}"/>
       <span>
-         ${star.rating} stars.
+         ${star.rating} stars
     </span>
     `;
     }).join('');
@@ -108,6 +108,7 @@ const theButtons = function () {
     </section>
   `;
 };
+
 
 const newBookmarkForm = function () {
     const title = store.newBookmark.title ?

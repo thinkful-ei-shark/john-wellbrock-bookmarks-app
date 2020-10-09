@@ -19,9 +19,7 @@ const main = function () {
       render();
     })
     .catch(error => {
-      store.error = error;
-      render();
-      store.error = null;
+      console.log(`Error: ${error}`)
     });
 };
 
