@@ -40,6 +40,7 @@ const ratingByStars = function (item) {
 };
 
 const listItem = function (item) {
+  console.log(item);
     if (item.expanded) {
         return `
     <li class="js-bookmark-item bookmark-item-expanded" data-id="${item.id}">
@@ -59,7 +60,7 @@ const listItem = function (item) {
             <span>Delete Bookmark</span>
           </button>
           <button class="collapse-bookmark">Collapse</button>
-          <button class="bookmark-link">Visit Site</button>
+          <a href=${item.url}><button class="bookmark-link">Visit Site</button></a>
         </footer>
       </section>
     </section>
@@ -71,7 +72,7 @@ const listItem = function (item) {
       <section class="bookmark-row">
         <button class="js-bookmark-name bookmark-name">${item.title}</button>
         <div class="bookmark-rating js-bookmark-rating">
-        ${ratingByStars(item)}
+        ${item.rating} Star Bookmark
         </div>
       </section>
     </li>

@@ -3,12 +3,6 @@ const BASE_URL = 'https://thinkful-list-api.herokuapp.com'
 const username = 'wellbrock-john';
 const endpoint = `${BASE_URL}/${username}/bookmarks`;
 
-// so pretty much anywhere you have the 
-// store.error = error;
-// render();
-// store.error = null;
-// just replace it with 
-// console.log(`Error: ${error}`)
 
 const fetchApi = function (...args) {
   let error = null;

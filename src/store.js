@@ -3,7 +3,7 @@ const bookmarks = [
     id: 'x56w',
     title: 'Title 1',
     rating: 3,
-    url: 'http://www.title1.com',
+    url: 'https://www.title1.com',
     description: 'A description should go here.',
     expanded: false
   },
@@ -11,7 +11,7 @@ const bookmarks = [
     id: '6ffw',
     title: 'Title 2',
     rating: 5,
-    url: 'http://www.title2.com',
+    url: 'https://www.title2.com',
     description: 'A description should go here.',
     expanded: false
   },
@@ -19,7 +19,7 @@ const bookmarks = [
     id: 'fw544',
     title: 'This is a test for how a long title will fit into the bookmark app.',
     rating: 4,
-    url: 'http://an-ex.ample',
+    url: 'https://an-ex.ample',
     description: `A description should go here.`,
     expanded: false
   }

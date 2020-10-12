@@ -1,10 +1,7 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-
-
 html {
     background-color: #427F80;
-    font-family:'Secular One',sans-serf;
+    font-family: 'Secular One', sans-serf;
     font-weight: 300;
 }
 
@@ -16,14 +13,15 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 63%;
-    height:40px;
+    width: auto;
+    height: 40px;
     color: white;
-    margin-bottom:0.4em;
-    background-color:#AFC5AE;
+    margin-bottom: 0.4em;
+    background-color: #AFC5AE;
     border-radius: 0.3em;
-    padding-top:0.3em;
-    padding-bottom:0.3em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    text-align: center;
 }
 
 header {
@@ -36,8 +34,8 @@ header {
 }
 
 main {
-    margin:auto;
-    width:60%;
+    margin: auto;
+    width: 60%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -56,56 +54,54 @@ main {
 
 .new-bookmark {
     padding: 7%;
-    background-color:#404542;
+    background-color: #404542;
     color: white;
     margin-bottom: 3%;
     border: none;
-    box-shadow: 0 5px 25px rgba(0,0,0,.5);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
     border-radius: 10px;
 }
 
-.bookmark-row{
+.bookmark-row {
     background-color: #AFC5AE;
     margin: .8em 0.2em 0.3em 0.2em;
-    padding:0.2em 0.2em 0.2em 0.2em;
-    width:75%;
+    padding: 0.2em 0.2em 0.2em 0.2em;
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-button.js-bookmark-name{
-    background-color:#AFC5AE;
-    margin:0.5em 0.5em 0.5em 0.5em;
-    
+button.js-bookmark-name {
+    background-color: #AFC5AE;
+    margin: 0.5em 0.5em 0.5em 0.5em;
 }
 
 .js-bookmark-rating {
     display: flex;
     flex-direction: column;
-    justify-content: space-around; 
+    justify-content: space-around;
 }
 
-#filter-select{
-    border-radius:0.5em;
-    padding:0.3em 0.3em 0.4em 0.3em;
+#filter-select {
+    border-radius: 0.5em;
+    padding: 0.3em 0.3em 0.4em 0.3em;
 }
 
 .filter-bookmarks select {
-    background:#404542;
+    background: #404542;
     color: white;
     padding: 3px;
     border: none;
-    box-shadow: 0 5px 25px rgba(0,0,0,.5);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
     border-radius: 3px;
 }
 
 #new-bookmark-form {
     border-radius: 0.5em;
-    margin:auto;
-    background-color:#AFC5AE;
+    margin: auto;
+    background-color: #AFC5AE;
     padding: 0.5em 0.5em 0.5em 0.5em;
-
 }
 
 .bookmark-item {
@@ -115,16 +111,16 @@ button.js-bookmark-name{
     justify-content: center;
 }
 
-.bookmark-list{
+.bookmark-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     background-color: #6FA586;
-    border-radius:0.3em;
+    border-radius: 0.3em;
     list-style: none;
     padding-inline-start: unset;
-    
+    padding-bottom: .5em;
 }
 
 @media all and (min-width:500px) {
@@ -132,43 +128,55 @@ button.js-bookmark-name{
         display: flex;
         flex-direction: column;
     }
-
     .the-buttons {
-        background-color:#6FA586;
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #6FA586;
         flex-direction: row;
         height: 200px;
         align-self: center;
     }
-
-    .new-bookmark{
-       justify-self: center;
-       width: 50%;
-       align-self: center;
+    .new-bookmark {
+        flex: .4;
+        justify-self: center;
+        width: 50%;
+        align-self: center;
+        margin-bottom: 0;
+        margin-right: 10%;
+        margin-left: -10%;
     }
     .filter-bookmarks {
         align-self: center;
         height: 55px;
     }
-
     .bookmark-list {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-content: center;
         bottom: 30%;
-        padding: 10px;
-        list-style:none;
-
+        list-style: none;
+        width: 85%;
     }
-
     .bookmark-item {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        width: 100%;
+        height: 7em;
+        margin-top: 3%;
+        margin-bottom: 5%;
     }
 
+    .bookmark-row {
+        height: inherit;
+        align-items: center;
+    }
+
+    button.js-bookmark-name {
+        height: inherit;
+        width: inherit;
+    }
 }
-
-
-
-
